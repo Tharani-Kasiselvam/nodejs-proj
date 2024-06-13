@@ -17,6 +17,8 @@ const http = require('http')
 
 //create server object
 const server = http.createServer((request,response) => {
+    //this is to set Header object and it will be attached in the request/response
+    response.writeHead(200,{'Content-type' : 'text/plain'})
     response.end(JSON.stringify(notes))
 })
 
