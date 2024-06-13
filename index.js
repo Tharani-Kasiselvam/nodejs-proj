@@ -1,9 +1,23 @@
+//declaring an Array object to display in json data format
+const notes = [
+    {
+        id : 1,
+        content : "Testing note1",
+        important : true
+    },
+    {
+        id : 2,
+        content : "Testing note2",
+        important : false
+    }
+]
+
 //import http module
 const http = require('http')
 
 //create server object
 const server = http.createServer((request,response) => {
-    response.end('Hello Welcome!!!')
+    response.end(JSON.stringify(notes))
 })
 
 //start the server to listen to request on port 3001 [customized]
