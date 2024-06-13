@@ -23,6 +23,9 @@ const server = http.createServer((request,response) => {
 })
 
 //start the server to listen to request on port 3001 [customized]
-server.listen(3001, '127.0.0.1', () => {
+    // server.listen(3001, '127.0.0.1', () => {
+    
+        //we can also mention without the default ip as below:
+    server.listen(3001, () => {
     console.log("Server running on http://127.0.0.1:3001")
 })
